@@ -1,0 +1,31 @@
+<style type="text/css">
+body {
+  border-spacing: 0px;
+}
+#result {
+  border: none;
+  border-spacing: 0px;
+}
+table td{
+  padding: 5px 10px 5px 10px;
+  border-bottom: 1px solid #B0C4DE;
+}
+table th{
+  border-bottom: 1px solid #B0C4DE;
+  color: #fff;
+  background: #4682B4;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+}
+table tr{
+  padding: 0px;
+}
+table tr:nth-child(odd)  td{
+  background-color: #ffffff;
+  border-spacing: 0px;
+}
+table tr:nth-child(even) td{
+  background-color: #f0ffff;
+  border-spacing: 0px;
+}
+</style>
