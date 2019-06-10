@@ -12,7 +12,7 @@ function main() {
     y[i] = func_y( x );
   }
 
-  for( var i=0; i<N; i++ ) {  // 数値積分
+  for( var i=1; i<N; i++ ) {  // 数値積分
     z += 2.0 * y[i];
   }
   s = ( h/2.0 ) * ( y[0]+z+y[N] );  // 式(4.6)
