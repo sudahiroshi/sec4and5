@@ -6,15 +6,15 @@ function main() {
   var ddx = 0.0;
 
   var res = document.querySelector( "#result" );
-  addToTable( res, "X", "Y", "th" );
+  addToTable( res, "X", "Y", "th" );  // ヘッダ表示
 
   do {
     if( x>= ddx - EPS ) {
       ddx += dx;
-      addToTable( res, x, y, "td" );
+      addToTable( res, x, y, "td" );  // 表示
     }
 
-    y += h * func_f( x );  // 関数値像化
+    y += h * func_f( x );  // 関数値増加
     x += h;                // 式(5.4)
   } while( x <= xmax );    // 式(5.5)
 }
@@ -24,6 +24,13 @@ function func_f( x ) {
   return 2.0 * x;
 }
 
+/**
+ * テーブル要素に回答を追加する関数
+ * @param {HTMLTableElement} elem 追加するTable要素
+ * @param {number} x xの値
+ * @param {number} y yの値
+ * @param {string} classification "th"か"td"を指定する
+ */
 function addToTable( elem, x, y, classification ) {
   var table_row = document.createElement( 'tr' );
   var tdx = document.createElement( classification );
